@@ -1,0 +1,74 @@
+﻿@page "/chilllist"
+@using Newtonsoft.Json
+@inject HttpClient Http
+
+<div class="workblock">
+	<div class="row">
+		<div class="col-3"></div>
+		<div class="col-9 h11">
+			<h1>Список объявлений</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-3"></div>
+		<div class="col-9">
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">ID</th>
+						<th scope="col">Name</th>
+						<th scope="col">Phone</th>
+						<th scope="col">Price USD</th>
+						<th scope="col">Course</th>
+						<th scope="col">Price BY</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var x in advs)
+					{
+						<tr>
+							<th scope="row">@x.id</th>
+							<td>@x.Name</td>
+							<td>@x.phoneNumber</td>
+							<td>@x.priceUSD</td>
+							<td>@x.courseOfUSD</td>
+							<td>@x.priceBYN</td>
+
+						</tr>
+					}
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+</div>
+@code {
+
+	public List<ChillLists> advs;
+
+	protected override async Task OnInitializedAsync()
+	{
+
+		advs = new List<ChillLists>();
+
+
+		/*ChillLists adv1 = new ChillLists(1, "Тихая гавань", "+48256698745", 30.0f, 3.0f, 90.0f);
+		ChillLists adv2 = new ChillLists(2, "Шалаши Партизан", "+48256698745", 30.0f, 3.0f, 90.0f);
+		ChillLists adv3 = new ChillLists(3, "Медвежья норка", "+48256698745", 30.0f, 3.0f, 90.0f);
+		ChillLists adv4 = new ChillLists(4, "Красный двор", "+37529 568 78 98", 30.0f, 3.0f, 90.0f);
+
+		advs.Add(adv1);
+		advs.Add(adv2);
+		advs.Add(adv3);
+		advs.Add(adv4);*/
+
+
+		advs = new List<ChillLists>();
+		String jsonString = await Http.GetStringAsync("http://localhost:10000/api/MetaChill/GetList");
+
+		Console.WriteLine(jsonString);
+		advs = JsonConvert.DeserializeObject<List<ChillLists>>(jsonString);
+	}
+
+}

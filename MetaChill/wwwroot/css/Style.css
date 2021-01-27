@@ -1,0 +1,67 @@
+﻿body {
+	font-family: Tahoma;
+
+}
+
+.sitemenu {
+	height: 62px;
+	background: rgb(76 150 215);
+	margin-top: 105px;
+	vertical-align: middle;
+	margin-left: 60px;
+
+}
+
+.menu_element {
+	text-transform: uppercase;
+	margin-left: 45px;
+	display: inline-block;
+	font-family: Tahoma;
+	color: #000000;
+	margin-top: 20px;
+	font-weight: 500;
+}
+
+.menu_elements {
+	margin-left: 55px;
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+a:hover {
+	color: #ffffff; /* Цвет ссылки при наведении на нее курсора мыши */
+	text-decoration: underline; /* Добавляем подчеркивание */
+}
+
+h1, h2 {
+	font-family: Tahoma;
+	color: #000000;
+	margin-left: 60px;
+}
+
+h1 {
+	font-size: 16pt;
+}
+
+h2 {
+	font-size: 14pt;
+	margin-top: 15px;
+}
+
+.workblock {
+	color: #000000;
+	margin-left: -50px;
+	margin-top: 8px;
+}
+.h11 {
+	margin-left: -58px;
+	margin-top: -8px;
+}
+
+.about {
+	margin-left: 60px;
+	margin-top: 10px;
+}

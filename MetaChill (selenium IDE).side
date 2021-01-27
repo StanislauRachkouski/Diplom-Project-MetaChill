@@ -1,0 +1,145 @@
+{
+  "id": "9865cfdf-ff92-47b2-a968-d9842b6ed2a4",
+  "version": "2.0",
+  "name": "MetaChill",
+  "url": "http://localhost:55152",
+  "tests": [{
+    "id": "aa9f22c7-0bb5-4b97-91f5-4eeca5d9fcff",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "bb876074-90d2-4aa2-9fbf-211635c589b4",
+    "name": "Positive (add chillplace)",
+    "commands": [{
+      "id": "734361d5-2b0a-4b34-be39-9512632f44f3",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96243058-5793-4a59-8df6-2f1bac1582bf",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1054x790",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9fcead2d-d45f-4ae0-a635-08e4203b061e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(2) > a",
+      "targets": [
+        ["css=.nav-item:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Добавить место отдыха')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/chilladd')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9503943f-3b70-48d2-8219-80f3cd97ed65",
+      "comment": "",
+      "command": "click",
+      "target": "id=Name",
+      "targets": [
+        ["id=Name", "id"],
+        ["css=#Name", "css:finder"],
+        ["xpath=//input[@id='Name']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "592cbe33-4cb5-4436-ae20-d6c401f8c958",
+      "comment": "",
+      "command": "type",
+      "target": "id=Name",
+      "targets": [
+        ["id=Name", "id"],
+        ["css=#Name", "css:finder"],
+        ["xpath=//input[@id='Name']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "lesnoe chudo 2"
+    }, {
+      "id": "7ad1525f-e247-4874-bc71-548061f4239e",
+      "comment": "",
+      "command": "click",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "808bbd7f-bf30-4421-871a-26fd442eed3c",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": "+375364586523"
+    }, {
+      "id": "8f6a8c95-441c-41bb-8f58-232f7b1536fa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(4)",
+      "targets": [
+        ["css=.form-group:nth-child(4)", "css:finder"],
+        ["xpath=//div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d33a84a-ddf0-4070-88af-4ad08d986e1a",
+      "comment": "",
+      "command": "type",
+      "target": "id=price-usd",
+      "targets": [
+        ["id=price-usd", "id"],
+        ["css=#price-usd", "css:finder"],
+        ["xpath=//input[@id='price-usd']", "xpath:attributes"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": "20"
+    }, {
+      "id": "6237fd73-b1b0-4243-ac73-34b7d5307fe9",
+      "comment": "",
+      "command": "click",
+      "target": "id=price-byn",
+      "targets": [
+        ["id=price-byn", "id"],
+        ["css=#price-byn", "css:finder"],
+        ["xpath=//input[@id='price-byn']", "xpath:attributes"],
+        ["xpath=//div[6]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6bdb07db-73f6-4735-a363-f5313836f2e1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Отправить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2f846005-0bf7-43d3-ac97-3077bb0398ee",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["aa9f22c7-0bb5-4b97-91f5-4eeca5d9fcff"]
+  }],
+  "urls": ["http://localhost:55152/"],
+  "plugins": []
+}
