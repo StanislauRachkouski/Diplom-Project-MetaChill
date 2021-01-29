@@ -45,3 +45,7 @@ public class PositiveaddchillplaceTest
         driver.FindElement(By.CssSelector(".btn")).Click();
     }
 }
+
+public void Main()
+{ 
+}
